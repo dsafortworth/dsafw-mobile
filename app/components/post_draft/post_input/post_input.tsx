@@ -145,7 +145,7 @@ export default function PostInput({
     };
 
     const onBlur = useCallback(async () => {
-        updateDraftMessage(serverUrl, channelId, rootId, value);
+        await updateDraftMessage(serverUrl, channelId, rootId, value);
         const imageMetadata: Dictionary<PostImage | undefined> = {};
         await parseMarkdownImages(value, imageMetadata);
         if (Object.keys(imageMetadata).length !== 0) {
