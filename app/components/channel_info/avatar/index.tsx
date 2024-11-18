@@ -47,6 +47,7 @@ const Avatar = ({
     if (uri) {
         picture = (
             <Image
+                testID='avatar-image'
                 source={{uri: buildAbsoluteUrl(serverUrl, uri)}}
                 style={[styles.avatar, styles.avatarRadius]}
             />
@@ -54,6 +55,7 @@ const Avatar = ({
     } else {
         picture = (
             <CompassIcon
+                testID='avatar-icon'
                 name='account-outline'
                 size={20}
                 color={changeOpacity('#fff', 0.48)}
